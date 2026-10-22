@@ -1,180 +1,391 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101827">
-<title>Caderno de Espanhol · Carlos</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f2338">
+<title>Caderno de Espanhol S III</title>
 <style>
-:root{--bg:#0b1020;--panel:#121a2c;--panel2:#182238;--text:#eef3ff;--muted:#aab6cf;--line:#2b3852;--accent:#91b7ff;--accent2:#c6d8ff;--good:#75d6ad;--warn:#ffd27d}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top right,#182847 0,transparent 36%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:var(--accent2)}button,input,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:.65rem .9rem;border-radius:10px}button:hover{border-color:var(--accent)}.wrap{max-width:1120px;margin:auto;padding:24px}
-.hero{padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,#17243b,#101827 70%);box-shadow:0 20px 50px #0003}
-.kicker{color:var(--accent);font-size:.8rem;letter-spacing:.14em;font-weight:800;text-transform:uppercase}h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;margin:.45rem 0 1rem}h2{font-size:1.35rem;margin:0 0 12px}h3{font-size:1.05rem;margin:0 0 8px}.muted{color:var(--muted)}.hero-grid,.grid2,.grid3{display:grid;gap:14px}.hero-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:22px}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}.stat,.card,.day{border:1px solid var(--line);background:#121a2ceF;border-radius:16px;padding:18px}.stat strong{display:block;font-size:1.55rem}.progress{height:10px;background:#26334b;border-radius:99px;overflow:hidden;margin:10px 0}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#7aa7ff,#75d6ad);transition:width .2s}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.section{margin-top:24px}.day{margin:12px 0}.day-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.date{color:var(--accent);font-weight:800;font-size:.88rem}.tag{display:inline-block;font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--muted)}.checkrow{display:flex;gap:10px;align-items:flex-start;padding:8px 0}.checkrow input{margin-top:5px;accent-color:#83aaff;transform:scale(1.15)}.day.done{border-color:#3b8c70}.day.done .date:after{content:"  ✓ concluído";color:var(--good);font-size:.78rem}.tasklist{border-top:1px solid var(--line);margin-top:12px;padding-top:8px}.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.schedule{width:100%;border-collapse:collapse}.schedule td,.schedule th{border-bottom:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.schedule th{color:var(--accent2)}.pill{display:inline-block;padding:5px 9px;background:#1c2b43;border-radius:8px;margin:3px 3px 3px 0;font-size:.9rem}.resource{padding:12px 0;border-bottom:1px solid var(--line)}.resource:last-child{border:0}.resource a{font-weight:700}.notes{width:100%;min-height:100px;background:#0c1322;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--text)}.quiz label{display:block;padding:7px 0}.quiz .result{padding:12px;border-radius:10px;background:#1c2b43;margin-top:10px}.small{font-size:.88rem}.footer{color:var(--muted);text-align:center;padding:28px 0}.print-only{display:none}
-@media(max-width:760px){.wrap{padding:14px}.hero{padding:21px}.hero-grid,.grid2,.grid3,.two-col{grid-template-columns:1fr}.day-head{display:block}.stat strong{font-size:1.3rem}}
-@media print{body{background:#fff;color:#111;font-size:10pt}.wrap{max-width:none;padding:0}.hero,.card,.day,.stat{background:#fff;color:#111;border:1px solid #bbb;box-shadow:none;break-inside:avoid}.muted,.date,.kicker,.tag{color:#333}button,.toolbar,.interactive-only{display:none!important}.print-only{display:block}.section{break-inside:auto}.day{margin:8px 0;padding:12px}.progress{border:1px solid #aaa}.progress>div{background:#888!important}.notes{color:#111;background:#fff;border:1px solid #aaa}a{color:#111;text-decoration:underline}}
-
-/* Personalização visual */
-:root{--bg:#f3f5f8;--panel:#fff;--panel2:#f7f9fc;--text:#192536;--muted:#758092;--line:#e2e7ee;--accent:#476fae;--good:#2c765b;--radius:18px}
-body{background:var(--bg)!important;color:var(--text)!important;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important;line-height:1.55}
-.wrap{max-width:1160px!important;padding:26px 20px 52px!important}
-.hero{background:#17283f!important;border:0!important;border-radius:24px!important;padding:32px!important;box-shadow:0 12px 35px #17283f12!important;position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff18;border-radius:50%;right:-90px;top:-140px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05;pointer-events:none}
-.kicker{color:#b9cce7!important;letter-spacing:.15em!important}
-.hero h1{letter-spacing:-.05em!important;font-size:clamp(2.2rem,5vw,3.5rem)!important}
-.hero p{color:#d4deeb!important;max-width:680px}
-.hero-grid{gap:12px!important}
-.stat,.card,.day{background:#fff!important;border:1px solid var(--line)!important;border-radius:var(--radius)!important;box-shadow:0 6px 24px #17283f08!important}
-.stat{background:#f7f9fc!important}
-.stat strong{letter-spacing:-.04em}
-.section{margin-top:20px!important}
-.day{padding:17px!important;transition:transform .15s,border-color .15s!important}
-.day:hover{transform:translateY(-2px);border-color:#9eb5d6!important}
-.day.done{background:#eff8f3!important;border-color:#c5e3d4!important}
-.date{color:#476fae!important;letter-spacing:.04em}
-.tag{background:#edf3fc;color:#345e99;border:0}
-button{border-radius:10px!important;font-weight:650!important;transition:.15s}
-button:hover{transform:translateY(-1px)}
-button:disabled{cursor:not-allowed}
-input[type=checkbox],input[type=radio]{accent-color:#476fae}
-.notes,.note,textarea{border:1px solid var(--line)!important;border-radius:12px!important;background:#fbfcfe!important;padding:12px!important;color:var(--text)!important}
-table.schedule{border-collapse:collapse}
-.schedule td,.schedule th{padding:10px!important}
-.resource,.link-card{border-bottom:1px solid var(--line)!important}
-.panel-head{align-items:center}
-h1,h2,h3{letter-spacing:-.025em}
-.footer{padding:28px 0!important}
-@media(max-width:760px){.wrap{padding:14px!important}.hero{padding:23px!important;border-radius:18px!important}.hero-grid{grid-template-columns:1fr!important}.grid2,.grid3,.two-col{grid-template-columns:1fr!important}.day-head{display:block}.stat strong{font-size:1.35rem}}
-@media print{body{background:#fff!important}.hero{background:#fff!important;color:#111!important;border:1px solid #bbb!important}.hero p,.kicker{color:#444!important}.card,.day,.stat{box-shadow:none!important}}
-
-
-/* Redesign profissional — Caderno S III */
 :root{
- --bg:#f4f6f8;--panel:#ffffff;--panel2:#f8fafc;--text:#172536;--muted:#697789;
- --line:#e0e6ed;--accent:#315f8c;--accent2:#dce9f5;--good:#247457;--warn:#9b6a1e;
- --radius:18px;--shadow:0 8px 28px rgba(20,38,59,.055)
+  --bg:#f5f7fa;--surface:#fff;--surface-2:#f8fafc;--ink:#142235;--ink-2:#44566b;--muted:#6b7a8c;
+  --line:#e3e9f0;--line-2:#d3dce6;--brand:#1f4e79;--brand-2:#2f6ea5;--brand-soft:#e8f0f8;
+  --ok:#1f7a5a;--ok-soft:#e6f4ee;--warn:#9a6a14;--warn-soft:#fbf1dc;
+  --hero:#0f2338;--radius:16px;--radius-sm:10px;
+  --shadow:0 1px 2px rgba(15,35,56,.04),0 8px 24px rgba(15,35,56,.05);
+  --shadow-hover:0 2px 4px rgba(15,35,56,.05),0 14px 32px rgba(15,35,56,.09);
 }
-html{scroll-behavior:smooth;scroll-padding-top:20px}
-body{background:var(--bg)!important;color:var(--text)!important;font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif!important;font-size:14px;line-height:1.6}
-.wrap{max-width:1240px!important;padding:30px 26px 56px!important}
-.hero{position:relative;overflow:hidden;background:#152b42!important;border:0!important;border-radius:24px!important;padding:36px!important;box-shadow:0 18px 42px rgba(19,42,65,.12)!important}
-.hero:before{content:"";position:absolute;right:-115px;top:-210px;width:430px;height:430px;border:1px solid #ffffff16;border-radius:50%;box-shadow:0 0 0 42px #ffffff08,0 0 0 85px #ffffff05;pointer-events:none}
-.hero:after{content:"";position:absolute;right:115px;bottom:-220px;width:260px;height:260px;border:1px solid #ffffff12;border-radius:50%;pointer-events:none}
-.kicker{position:relative;z-index:1;color:#a9c8e5!important;font-size:.72rem!important;letter-spacing:.17em!important}
-.hero h1{position:relative;z-index:1;font-size:clamp(2.4rem,5vw,4rem)!important;letter-spacing:-.065em!important;font-weight:760!important;margin:14px 0 10px!important}
-.hero p{position:relative;z-index:1;color:#d4dfeb!important;max-width:740px}
-.hero p strong{color:#fff}
-#personalName{position:relative;z-index:2;outline:none;transition:border .15s,background .15s}
-#personalName:focus{border-color:#b7d5f2!important;background:#ffffff20!important}
-.hero-grid{position:relative;z-index:1;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;margin-top:28px!important}
-.hero-grid .stat{background:#ffffff0b!important;border:1px solid #ffffff20!important;border-radius:14px!important;box-shadow:none!important;padding:15px 17px!important}
-.hero-grid .stat .muted{color:#b8c8d8!important;font-size:.75rem}
-.hero-grid .stat strong{font-size:1.35rem!important;color:#fff;letter-spacing:-.045em}
-.hero-grid .stat .small{color:#d2dce7!important;font-size:.74rem}
-.section{margin-top:22px!important}
-.card,.day,.stat{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:var(--radius)!important;box-shadow:var(--shadow)!important}
-.card{padding:24px!important}
-h2{font-size:1.18rem!important;font-weight:750!important;letter-spacing:-.035em!important;margin:0 0 8px!important}
-h3{font-size:1rem!important;font-weight:720!important;letter-spacing:-.025em!important}
-.muted{color:var(--muted)!important}
-.small{font-size:.82rem!important}
-#progressText{font-size:1rem;color:var(--accent);font-variant-numeric:tabular-nums}
-.progress{height:9px!important;background:#e9eef3!important;border-radius:99px!important;margin:16px 0 12px!important}
-.progress>div{background:linear-gradient(90deg,#315f8c,#5d9b8a)!important;border-radius:99px;box-shadow:0 0 10px #315f8c22}
-.toolbar{gap:9px!important;margin:18px 0!important}
-button{border:1px solid #d7e0e9!important;background:#fff!important;color:#25384c!important;border-radius:10px!important;padding:10px 14px!important;font-size:.82rem!important;font-weight:700!important;box-shadow:0 2px 5px #14263b06;transition:background .15s,border-color .15s,transform .15s!important}
-button:hover{border-color:#8aa7c5!important;background:#f5f9fd!important;transform:translateY(-1px)}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #a9c8e5;outline-offset:2px}
-.two-col{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;gap:20px!important}
-.grid2{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important}
-.schedule{font-size:.82rem!important}
-.schedule th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent2)!important;background:#f4f7fa}
-.schedule td,.schedule th{border-bottom:1px solid #e8edf2!important;padding:11px 10px!important}
-.schedule td:first-child{white-space:nowrap;color:#3e5369;font-weight:650;font-variant-numeric:tabular-nums}
-.schedule tr:last-child td{border-bottom:0!important}
-.pill{background:#edf3f8!important;color:#315777!important;border-radius:8px!important}
-#days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;margin-top:16px}
-.day{margin:0!important;padding:20px!important;box-shadow:0 3px 15px rgba(20,38,59,.035)!important;transition:border-color .18s,box-shadow .18s,transform .18s!important;min-width:0}
-.day:hover{border-color:#b8cbdc!important;box-shadow:0 9px 24px rgba(20,38,59,.07)!important;transform:translateY(-2px)}
-.day.done{background:#f5faf7!important;border-color:#b8d9c9!important}
-.day-head{gap:10px!important}
-.date{font-size:.74rem!important;letter-spacing:.07em;text-transform:uppercase;color:#315f8c!important}
-.day h3{margin:5px 0 0!important;line-height:1.35}
-.tag{border:0!important;background:#edf3f8!important;color:#526b82!important;font-size:.68rem!important;font-weight:700;padding:5px 9px!important;white-space:nowrap}
-.day.done .tag{background:#e0f1e8!important;color:#247457!important}
-.day>p{font-size:.82rem;margin:12px 0!important}
-.tasklist{border-top:1px solid #e9edf2!important;margin-top:13px!important;padding-top:7px!important}
-.checkrow{gap:10px!important;padding:8px 0!important;font-size:.82rem;line-height:1.45}
-.checkrow input{accent-color:#315f8c!important;transform:scale(1.05)!important;flex:0 0 auto}
-.checkrow strong{font-weight:720}
-.day.done .date:after{color:var(--good)!important}
-#syllabus .checkrow{border-bottom:1px solid #edf0f4;padding:10px 0!important}
-#syllabus .checkrow:last-child{border-bottom:0}
-#syllabus .checkrow strong{font-size:.84rem}
-.resource{padding:14px 0!important;border-bottom:1px solid #e9edf2!important}
-.resource a{font-size:.88rem;color:#315f8c!important;text-decoration:none}
-.resource a:hover{text-decoration:underline}
-.resource p{margin:3px 0 0!important}
-.quiz label{font-size:.84rem;padding:6px 0!important;cursor:pointer}
-.quiz input{accent-color:#315f8c}
-.quiz .result{background:#edf4fa!important;color:#263f57;border:1px solid #d9e6f2}
-.notes{background:#fbfcfd!important;border:1px solid #dce4ec!important;color:var(--text)!important;min-height:150px!important;resize:vertical;line-height:1.6}
-.notes:focus{border-color:#8aa7c5!important;outline:none}
-#finalChecklist{margin-top:10px}
-.footer{font-size:.75rem!important;color:#8994a2!important;border-top:1px solid #e2e7ed;margin-top:35px}
-a{color:#315f8c}
-@media(max-width:900px){.wrap{padding:20px 16px 42px!important}.two-col{grid-template-columns:1fr!important}.hero{padding:28px!important}}
-@media(max-width:650px){.wrap{padding:12px 11px 32px!important}.hero{padding:23px 19px!important;border-radius:18px!important}.hero-grid{grid-template-columns:1fr!important;gap:8px!important;margin-top:20px!important}.hero-grid .stat{padding:12px 14px!important}.hero-grid .stat strong{font-size:1.2rem!important}.grid2,#days{grid-template-columns:1fr!important}.card{padding:18px!important}.day{padding:17px!important}.day-head{display:flex!important}.tag{white-space:normal;text-align:center;max-width:45%}.schedule{font-size:.76rem!important}.schedule td,.schedule th{padding:9px 6px!important}.schedule td:first-child{white-space:normal}.toolbar button{flex:1 1 auto}.hero h1{font-size:2.45rem!important}}
-@media print{body{background:#fff!important;color:#111!important}.wrap{padding:0!important}.hero{background:#fff!important;color:#111!important;border:1px solid #cbd2d9!important;box-shadow:none!important}.hero p,.hero p strong,.kicker{color:#333!important}.hero-grid .stat{background:#fff!important;border-color:#bbb!important}.hero-grid .stat strong,.hero-grid .stat .muted,.hero-grid .stat .small{color:#111!important}.hero:before,.hero:after{display:none}.card,.day,.stat{box-shadow:none!important;break-inside:avoid}.two-col,.grid2{grid-template-columns:1fr 1fr!important}#days{grid-template-columns:1fr 1fr!important;gap:8px}.day{padding:10px!important}.toolbar,.interactive-only{display:none!important}.section{margin-top:14px!important}.notes{background:#fff!important;color:#111!important}}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#0b1522;--surface:#121f31;--surface-2:#162539;--ink:#e8eef6;--ink-2:#b4c2d3;--muted:#8a9bb0;
+  --line:#22344c;--line-2:#2d4260;--brand:#8fc0ee;--brand-2:#6aa8e0;--brand-soft:#17304b;
+  --ok:#6fd1a8;--ok-soft:#113a2d;--warn:#f0c56c;--warn-soft:#3a2f12;--hero:#0a1a2c;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);--shadow-hover:0 14px 32px rgba(0,0,0,.4)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px;border-radius:6px}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
 
-</style></head>
-<body><main class="wrap">
-<header class="hero">
-<div class="kicker">CADERNO DE ESTUDOS · PERSONALIZADO</div>
-<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0 12px;position:relative;z-index:1">
-  <label for="personalName" style="font-size:13px;color:#d4deeb">Este plano é de</label>
-  <input id="personalName" value="Carlos" maxlength="32" style="width:140px;border:1px solid #ffffff40;background:#ffffff12;color:#fff;border-radius:8px;padding:6px 9px">
-  <span style="font-size:12px;color:#c4d2e5">06 nov · prova S III</span>
-</div>
-<h1 id="mainHeading">Espanhol S III</h1>
-<p class="muted">Plano de estudos de 23/10 a 05/11/2026 · Prova escrita, auditiva e visual em <strong>06/11/2026</strong>.</p>
-<p>Use esta página como painel de acompanhamento: marque as tarefas concluídas, acompanhe o progresso e registre suas dúvidas. O progresso fica salvo neste navegador.</p>
-<div class="hero-grid">
-<div class="stat"><span class="muted">Dias de preparação</span><strong>14</strong><span class="small">23 de outubro – 5 de novembro</span></div>
-<div class="stat"><span class="muted">Rotina principal</span><strong>09:00–13:40</strong><span class="small">Com pausas e almoço</span></div>
-<div class="stat"><span class="muted">Prova</span><strong>06/11/2026</strong><span class="small">Escrita · auditiva · visual</span></div>
-</div>
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.topbar .container{display:flex;align-items:center;gap:20px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:-.02em;white-space:nowrap}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-size:14px;font-weight:800}
+.nav{display:flex;gap:2px;margin-left:8px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:.86rem;font-weight:600;white-space:nowrap}
+.nav a:hover{background:var(--brand-soft);color:var(--brand)}
+.top-progress{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:.8rem;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.mini-bar{width:110px;height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.mini-bar>div{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--ok));border-radius:99px;transition:width .3s}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--hero);color:#fff;margin:24px auto 0;max-width:1180px;border-radius:24px;padding:44px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.09);pointer-events:none}
+.hero::before{width:460px;height:460px;right:-140px;top:-220px;box-shadow:0 0 0 46px rgba(255,255,255,.03),0 0 0 92px rgba(255,255,255,.02)}
+.hero::after{width:240px;height:240px;right:180px;bottom:-150px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr);gap:36px;align-items:center}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:#9cc4e8}
+.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.04;letter-spacing:-.055em;margin:12px 0 14px;font-weight:780}
+.hero p{margin:0 0 10px;color:#cfdbe8;max-width:600px}
+.hero p strong{color:#fff}
+.owner{display:inline-flex;align-items:center;gap:8px;margin-bottom:6px;font-size:.82rem;color:#cfdbe8}
+.owner input{width:130px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:8px;padding:5px 10px}
+.owner input:focus{border-color:#b7d5f2;background:rgba(255,255,255,.14);outline:none}
+.countdown{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:24px;text-align:center}
+.countdown .num{font-size:4rem;font-weight:800;line-height:1;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.countdown .lbl{margin-top:6px;color:#cfdbe8;font-size:.9rem}
+.countdown .sub{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;color:#a9bccf}
+.facts{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.fact{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:14px 16px}
+.fact span{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#a9bccf}
+.fact strong{display:block;font-size:1.2rem;letter-spacing:-.03em;margin-top:2px}
+.fact small{color:#c3d1df;font-size:.78rem}
+
+/* Layout */
+main{padding-bottom:20px}
+.section{margin-top:56px}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.section-head h2{margin:0;font-size:1.5rem;letter-spacing:-.04em;line-height:1.2}
+.section-head p{margin:4px 0 0;color:var(--muted);font-size:.9rem;max-width:620px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 4px;font-size:1.05rem;letter-spacing:-.02em}
+.card .lead{margin:0 0 14px;color:var(--muted);font-size:.86rem}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.muted{color:var(--muted)}.small{font-size:.84rem}
+
+/* Progress */
+.overview{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:16px;margin-top:-1px}
+.stat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.stat-card .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
+.stat-card .v{font-size:2rem;font-weight:780;letter-spacing:-.05em;line-height:1.1;margin-top:6px;font-variant-numeric:tabular-nums}
+.stat-card .d{font-size:.8rem;color:var(--muted);margin-top:2px}
+.bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:14px}
+.bar>div{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--ok));border-radius:99px;transition:width .3s}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 14px;font-size:.84rem;font-weight:650;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.btn:hover{background:var(--brand-soft);border-color:var(--brand-2);transform:translateY(-1px)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand-2);color:#fff}
+.btn.danger:hover{background:var(--warn-soft);border-color:var(--warn);color:var(--warn)}
+
+/* Tables */
+.schedule{width:100%;border-collapse:collapse;font-size:.88rem}
+.schedule th{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line-2)}
+.schedule td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.schedule tr:last-child td{border-bottom:0}
+.schedule td:first-child{white-space:nowrap;font-weight:650;color:var(--ink-2);font-variant-numeric:tabular-nums;width:1%}
+.schedule tr.break td{color:var(--muted);font-size:.82rem;padding-top:6px;padding-bottom:6px}
+.rules{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.rules li{display:flex;gap:10px;font-size:.88rem;color:var(--ink-2)}
+.rules li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--brand-2);margin-top:8px}
+
+/* Calendar */
+.filters{display:inline-flex;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:4px;gap:2px}
+.filters button{border:0;background:transparent;border-radius:9px;padding:7px 14px;font-size:.82rem;font-weight:650;color:var(--ink-2);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--surface);color:var(--brand);box-shadow:0 1px 3px rgba(15,35,56,.1)}
+.week{margin-top:26px}
+.week h3{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;gap:12px}
+.week h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.day{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s,transform .18s}
+.day:hover{border-color:var(--line-2);box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.day.today{border-color:var(--brand-2);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-2) 22%,transparent),var(--shadow)}
+.day.done{background:var(--ok-soft);border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
+.day[hidden]{display:none}
+.day-top{display:flex;gap:14px;align-items:flex-start}
+.datebox{flex:0 0 54px;text-align:center;background:var(--brand-soft);color:var(--brand);border-radius:12px;padding:7px 0 6px;line-height:1.1}
+.datebox b{display:block;font-size:1.4rem;letter-spacing:-.04em}
+.datebox span{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.day.done .datebox{background:var(--ok);color:#fff}
+.day-title{flex:1;min-width:0}
+.day-title .wk{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.day-title h4{margin:2px 0 0;font-size:1rem;line-height:1.35;letter-spacing:-.02em}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.badge{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--brand-soft);color:var(--brand)}
+.badge.warn{background:var(--warn-soft);color:var(--warn)}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}
+.badge.now{background:var(--brand);color:#fff}
+.day-desc{margin:14px 0 4px;font-size:.84rem;color:var(--ink-2)}
+.tasklist{margin-top:12px;border-top:1px solid var(--line);padding-top:6px}
+.check{display:flex;gap:11px;align-items:flex-start;padding:8px 0;cursor:pointer;font-size:.86rem;line-height:1.45}
+.check input{flex:0 0 auto;width:17px;height:17px;margin:2px 0 0;accent-color:var(--brand)}
+.check input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--muted) 50%,transparent)}
+.check.final{margin-top:4px;padding-top:12px;border-top:1px dashed var(--line-2)}
+.check.final input:checked+span{text-decoration:none;color:var(--ok)}
+.day-progress{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.74rem;font-weight:700;color:var(--muted)}
+.day-progress .bar{flex:1;height:5px;margin:0}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:34px;border:1px dashed var(--line-2);border-radius:var(--radius)}
+
+/* Syllabus & resources */
+#syllabus .check{padding:11px 0;border-bottom:1px solid var(--line)}
+#syllabus .check:last-child{border-bottom:0}
+#syllabus .check strong{font-size:.9rem}
+#syllabus .check input:checked+span strong{text-decoration:line-through;color:var(--muted)}
+.syl-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:.82rem;color:var(--muted)}
+.resource{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.resource:last-of-type{border-bottom:0}
+.resource .ico{flex:0 0 34px;height:34px;border-radius:10px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-size:.85rem;font-weight:800}
+.resource a{font-weight:700;font-size:.92rem;text-decoration:none}
+.resource a:hover{text-decoration:underline}
+.resource p{margin:2px 0 0;font-size:.82rem;color:var(--muted)}
+
+/* Quiz & notes */
+.q{padding:14px 0;border-bottom:1px solid var(--line)}
+.q:first-child{padding-top:0}
+.q strong{display:block;margin-bottom:6px;font-size:.92rem}
+.q label{display:flex;gap:9px;align-items:center;padding:6px 10px;border-radius:8px;font-size:.88rem;cursor:pointer}
+.q label:hover{background:var(--brand-soft)}
+.q input{accent-color:var(--brand)}
+.q-result{margin-top:16px;padding:16px;border-radius:12px;background:var(--brand-soft);border:1px solid var(--line-2);font-size:.86rem;line-height:1.7}
+.q-result[hidden]{display:none}
+.notes{width:100%;min-height:230px;resize:vertical;background:var(--surface-2);border:1px solid var(--line-2);border-radius:12px;padding:14px;line-height:1.65;font-size:.9rem}
+.notes:focus{border-color:var(--brand-2);outline:none;background:var(--surface)}
+#finalChecklist .check{padding:11px 0;border-bottom:1px solid var(--line)}
+#finalChecklist .check:last-child{border-bottom:0}
+.callout{margin-top:16px;padding:14px 16px;border-radius:12px;background:var(--warn-soft);color:var(--warn);font-size:.88rem}
+.callout strong{color:inherit}
+
+.footer{margin-top:56px;padding:26px 0 40px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.78rem}
+
+/* Responsive */
+@media(max-width:980px){
+  .overview{grid-template-columns:1fr 1fr}
+  .overview .stat-card:first-child{grid-column:1/-1}
+  .hero-grid{grid-template-columns:1fr}
+  .countdown{display:flex;align-items:center;gap:20px;text-align:left}
+  .countdown .num{font-size:3rem}
+  .countdown .sub{display:none}
+}
+@media(max-width:760px){
+  .container{padding:0 14px}
+  .hero{margin:14px 14px 0;border-radius:18px;padding:28px 20px}
+  .facts{grid-template-columns:1fr;gap:8px;margin-top:22px}
+  .grid-2,.days{grid-template-columns:1fr}
+  .top-progress .mini-bar{display:none}
+  .brand span.t{display:none}
+  .section{margin-top:40px}
+  .card{padding:18px}
+  .overview{grid-template-columns:1fr 1fr;gap:10px}
+}
+
+/* Print */
+@media print{
+  :root{--bg:#fff;--surface:#fff;--ink:#111;--ink-2:#333;--muted:#555;--line:#ccc;--line-2:#bbb}
+  body{font-size:10pt}
+  .topbar,.toolbar,.filters,.btn,.no-print,.countdown{display:none!important}
+  .hero{background:#fff;color:#111;border:1px solid #bbb;margin:0 0 12px;padding:18px}
+  .hero::before,.hero::after{display:none}
+  .hero p,.eyebrow,.owner{color:#333}
+  .owner input{border:0;background:none;color:#111;padding:0}
+  .fact{background:#fff;border-color:#bbb}.fact span,.fact small,.fact strong{color:#111}
+  .card,.day,.stat-card{box-shadow:none;break-inside:avoid}
+  .section{margin-top:16px}
+  .days{gap:8px}.day{padding:10px}
+  .grid-2,.days{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <div class="brand"><div class="brand-mark">ES</div><span class="t">Caderno S III</span></div>
+    <nav class="nav" aria-label="Seções">
+      <a href="#visao">Visão geral</a>
+      <a href="#rotina">Rotina</a>
+      <a href="#calendario">Calendário</a>
+      <a href="#edital">Edital</a>
+      <a href="#revisao">Revisão</a>
+    </nav>
+    <div class="top-progress"><span id="topPct">0%</span><div class="mini-bar"><div id="topBar"></div></div></div>
+  </div>
 </header>
-<div class="section card">
-<div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><h2>Seu progresso</h2><strong id="progressText">0% concluído</strong></div>
-<div class="progress"><div id="progressBar"></div></div><p class="muted small" id="progressDetail">0 de 14 dias concluídos · 0 tarefas marcadas.</p>
-<div class="toolbar interactive-only"><button onclick="window.print()">Imprimir / salvar como PDF</button><button onclick="exportProgress()">Exportar progresso</button><button onclick="document.getElementById('importFile').click()">Importar progresso</button><input id="importFile" type="file" accept="application/json" hidden onchange="importProgress(event)"><button onclick="resetProgress()">Zerar marcações</button></div>
-<p class="muted small">Para hospedar, envie este arquivo HTML para um repositório GitHub e ative o GitHub Pages. Para gerar PDF: clique em “Imprimir / salvar como PDF” e selecione “Salvar como PDF”.</p>
-</div>
-<section class="section two-col">
-<div class="card"><h2>Rotina diária sugerida</h2><table class="schedule"><thead><tr><th>Horário</th><th>Atividade</th></tr></thead><tbody>
-<tr><td>09:00–09:50</td><td>Gramática: regra, exemplos e frases próprias</td></tr><tr><td>09:50–10:00</td><td>Pausa</td></tr><tr><td>10:00–10:50</td><td>Exercícios e correção dos erros</td></tr><tr><td>10:50–11:00</td><td>Pausa</td></tr><tr><td>11:00–11:30</td><td>Vocabulário temático e cartões</td></tr><tr><td>11:30–12:10</td><td>Almoço e descanso (alternativa: iniciar às 12:00 e deslocar a tarde)</td></tr><tr><td>12:10–12:55</td><td>Compreensão auditiva e visual</td></tr><tr><td>12:55–13:05</td><td>Pausa</td></tr><tr><td>13:05–13:40</td><td>Produção escrita e revisão</td></tr>
-</tbody></table><p class="muted small">Estudo efetivo aproximado: 3h30 por dia, além das pausas.</p></div>
-<div class="card"><h2>Terças-feiras: reforço à noite</h2><p class="muted">27/10 e 03/11 · 19:30–21:50</p><table class="schedule"><tbody><tr><td>19:30–20:10</td><td>Revisão ativa e questões erradas</td></tr><tr><td>20:10–20:20</td><td>Pausa</td></tr><tr><td>20:20–21:00</td><td>Áudio e exercícios de compreensão</td></tr><tr><td>21:00–21:10</td><td>Pausa</td></tr><tr><td>21:10–21:50</td><td>Mini simulado e revisão final</td></tr></tbody></table><h3 style="margin-top:18px">Regras de ouro</h3><ul><li>Responder primeiro sem consultar a teoria.</li><li>Anotar erros e revisar no dia seguinte.</li><li>Treinar áudio sem ler a transcrição na primeira escuta.</li><li>Priorizar compreensão e uso das regras, não só decorar.</li></ul></div>
+
+<section class="hero" aria-labelledby="mainHeading">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Caderno de estudos · Personalizado</div>
+      <h1 id="mainHeading">Espanhol S III</h1>
+      <div class="owner">
+        <label for="personalName">Este plano é de</label>
+        <input id="personalName" value="Carlos" maxlength="32" autocomplete="off">
+      </div>
+      <p>Plano de estudos de <strong>23/10 a 05/11/2026</strong>. Prova escrita, auditiva e visual em <strong>06/11/2026</strong>.</p>
+      <p>Marque as tarefas concluídas, acompanhe seu progresso e registre suas dúvidas. Tudo fica salvo neste navegador.</p>
+    </div>
+    <div class="countdown" aria-live="polite">
+      <div>
+        <div class="num" id="cdNum">–</div>
+        <div class="lbl" id="cdLbl">dias para a prova</div>
+      </div>
+      <div class="sub">Prova em 06/11/2026<br>Escrita · auditiva · visual</div>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="fact"><span>Dias de preparação</span><strong>14</strong><small>23 de outubro a 5 de novembro</small></div>
+    <div class="fact"><span>Rotina principal</span><strong>09:00 – 13:40</strong><small>Com pausas e almoço</small></div>
+    <div class="fact"><span>Estudo efetivo</span><strong>≈ 3h30 / dia</strong><small>Além das pausas</small></div>
+  </div>
 </section>
-<section class="section"><h2>Calendário de estudos</h2><p class="muted">Marque as tarefas conforme terminar. Cada dia tem atividades de gramática, vocabulário e prática relacionadas ao edital.</p><div id="days"></div></section>
-<section class="section grid2">
-<div class="card"><h2>Conteúdo do edital — checklist geral</h2><p class="muted small">Marque quando conseguir resolver exercícios sem consultar suas anotações.</p><div id="syllabus"></div></div>
-<div class="card"><h2>Materiais gratuitos</h2>
-<div class="resource"><a href="https://www.profedeele.es/gramatica/" target="_blank" rel="noopener">ProfeDeELE — gramática</a><p class="muted small">Explicações, vídeos, imagens e atividades.</p></div>
-<div class="resource"><a href="https://www.todo-claro.com/f_espagnole-exercices-de-grammaire.php" target="_blank" rel="noopener">Todo-Claro — exercícios</a><p class="muted small">Prática por tópicos gramaticais.</p></div>
-<div class="resource"><a href="https://speecher.org/es/spanish/listening" target="_blank" rel="noopener">Speecher — compreensão auditiva</a><p class="muted small">Áudios e perguntas de compreensão.</p></div>
-<div class="resource"><a href="https://cervantes.de/es/prueba-de-nivel/" target="_blank" rel="noopener">Instituto Cervantes — teste de nível</a><p class="muted small">Use para diagnóstico, sem substituir o conteúdo do edital.</p></div>
-<div class="resource"><a href="https://spanishgrammar.co.uk/practice-fill-blanks" target="_blank" rel="noopener">SpanishGrammar — prática</a><p class="muted small">Exercícios de gramática organizados por assunto.</p></div>
-<p class="muted small">Se algum link mudar, pesquise pelo nome do site e pelo assunto específico.</p></div>
-</section>
-<section class="section grid2">
-<div class="card quiz"><h2>Mini teste de revisão</h2><p class="muted small">Faça sem consultar o material e depois confira.</p>
-<div id="quiz"></div><button class="interactive-only" onclick="checkQuiz()">Corrigir mini teste</button><div id="quizResult" class="result" hidden></div></div>
-<div class="card"><h2>Meu caderno de erros</h2><p class="muted small">Anote dúvidas, palavras novas e assuntos para revisar. O texto é salvo neste navegador.</p><textarea id="notes" class="notes" placeholder="Ex.: confundo hay que e tener que; preciso revisar demonstrativos..."></textarea><p class="muted small">Dica: escreva a regra correta e um exemplo seu para cada erro.</p></div>
-</section>
-<section class="section card"><h2>Checklist para a véspera</h2><div id="finalChecklist"></div><p><strong>Dia da prova: 06/11/2026.</strong> Faça uma revisão leve, leia as instruções com atenção e não passe a noite tentando aprender tudo de novo.</p></section>
-<footer class="footer">Plano de preparação — Espanhol S III · 2026</footer>
+
+<main class="container">
+
+  <section class="section" id="visao" aria-labelledby="h-visao" style="margin-top:32px">
+    <div class="section-head">
+      <div><h2 id="h-visao">Seu progresso</h2><p>Visão geral do que já foi concluído.</p></div>
+      <div class="toolbar">
+        <button class="btn primary" onclick="window.print()">Imprimir / salvar PDF</button>
+        <button class="btn" onclick="exportProgress()">Exportar</button>
+        <button class="btn" onclick="document.getElementById('importFile').click()">Importar</button>
+        <input id="importFile" type="file" accept="application/json" hidden onchange="importProgress(event)">
+        <button class="btn danger" onclick="resetProgress()">Zerar marcações</button>
+      </div>
+    </div>
+    <div class="overview">
+      <div class="stat-card">
+        <div class="k">Progresso total</div>
+        <div class="v" id="progressText">0%</div>
+        <div class="bar"><div id="progressBar"></div></div>
+        <div class="d" id="progressDetail" style="margin-top:10px">0 de 14 dias concluídos · 0 marcações.</div>
+      </div>
+      <div class="stat-card"><div class="k">Dias concluídos</div><div class="v" id="sDays">0<span class="muted" style="font-size:1rem;font-weight:600"> /14</span></div><div class="d">dias fechados</div></div>
+      <div class="stat-card"><div class="k">Edital dominado</div><div class="v" id="sSyl">0<span class="muted" style="font-size:1rem;font-weight:600"> /16</span></div><div class="d">tópicos revisados</div></div>
+      <div class="stat-card"><div class="k">Tarefas feitas</div><div class="v" id="sTasks">0<span class="muted" style="font-size:1rem;font-weight:600"> /42</span></div><div class="d">atividades do calendário</div></div>
+    </div>
+    <p class="muted small no-print" style="margin-top:14px">Para hospedar: envie este arquivo HTML para um repositório no GitHub e ative o GitHub Pages. Para gerar PDF, use “Imprimir / salvar PDF” e escolha “Salvar como PDF”.</p>
+  </section>
+
+  <section class="section" id="rotina" aria-labelledby="h-rotina">
+    <div class="section-head"><div><h2 id="h-rotina">Rotina de estudo</h2><p>Horários sugeridos para os dias normais e reforço noturno nas terças.</p></div></div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Rotina diária sugerida</h3>
+        <p class="lead">Das 09:00 às 13:40</p>
+        <table class="schedule">
+          <thead><tr><th>Horário</th><th>Atividade</th></tr></thead>
+          <tbody>
+            <tr><td>09:00–09:50</td><td>Gramática: regra, exemplos e frases próprias</td></tr>
+            <tr class="break"><td>09:50–10:00</td><td>Pausa</td></tr>
+            <tr><td>10:00–10:50</td><td>Exercícios e correção dos erros</td></tr>
+            <tr class="break"><td>10:50–11:00</td><td>Pausa</td></tr>
+            <tr><td>11:00–11:30</td><td>Vocabulário temático e cartões</td></tr>
+            <tr class="break"><td>11:30–12:10</td><td>Almoço e descanso (alternativa: iniciar às 12:00 e deslocar a tarde)</td></tr>
+            <tr><td>12:10–12:55</td><td>Compreensão auditiva e visual</td></tr>
+            <tr class="break"><td>12:55–13:05</td><td>Pausa</td></tr>
+            <tr><td>13:05–13:40</td><td>Produção escrita e revisão</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Terças-feiras: reforço à noite</h3>
+        <p class="lead">27/10 e 03/11 · 19:30–21:50</p>
+        <table class="schedule">
+          <tbody>
+            <tr><td>19:30–20:10</td><td>Revisão ativa e questões erradas</td></tr>
+            <tr class="break"><td>20:10–20:20</td><td>Pausa</td></tr>
+            <tr><td>20:20–21:00</td><td>Áudio e exercícios de compreensão</td></tr>
+            <tr class="break"><td>21:00–21:10</td><td>Pausa</td></tr>
+            <tr><td>21:10–21:50</td><td>Mini simulado e revisão final</td></tr>
+          </tbody>
+        </table>
+        <h3 style="margin-top:22px">Regras de ouro</h3>
+        <ul class="rules">
+          <li>Responder primeiro sem consultar a teoria.</li>
+          <li>Anotar erros e revisar no dia seguinte.</li>
+          <li>Treinar áudio sem ler a transcrição na primeira escuta.</li>
+          <li>Priorizar compreensão e uso das regras, não só decorar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="calendario" aria-labelledby="h-cal">
+    <div class="section-head">
+      <div><h2 id="h-cal">Calendário de estudos</h2><p>Cada dia combina gramática, vocabulário e prática, de acordo com o edital.</p></div>
+      <div class="filters no-print" role="group" aria-label="Filtrar dias">
+        <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+        <button type="button" data-filter="pending" aria-pressed="false">Pendentes</button>
+        <button type="button" data-filter="done" aria-pressed="false">Concluídos</button>
+      </div>
+    </div>
+    <div id="days"></div>
+  </section>
+
+  <section class="section" id="edital" aria-labelledby="h-edital">
+    <div class="section-head"><div><h2 id="h-edital">Edital e materiais</h2><p>Confira o conteúdo cobrado e use os materiais gratuitos para praticar.</p></div></div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Conteúdo do edital</h3>
+        <p class="lead">Marque quando conseguir resolver exercícios sem consultar suas anotações.</p>
+        <div class="syl-meta"><span id="sylCount">0 de 16 tópicos</span></div>
+        <div id="syllabus"></div>
+      </div>
+      <div class="card">
+        <h3>Materiais gratuitos</h3>
+        <p class="lead">Links externos para praticar além do caderno.</p>
+        <div class="resource"><div class="ico">G</div><div><a href="https://www.profedeele.es/gramatica/" target="_blank" rel="noopener">ProfeDeELE — gramática</a><p>Explicações, vídeos, imagens e atividades.</p></div></div>
+        <div class="resource"><div class="ico">E</div><div><a href="https://www.todo-claro.com/f_espagnole-exercices-de-grammaire.php" target="_blank" rel="noopener">Todo-Claro — exercícios</a><p>Prática por tópicos gramaticais.</p></div></div>
+        <div class="resource"><div class="ico">A</div><div><a href="https://speecher.org/es/spanish/listening" target="_blank" rel="noopener">Speecher — compreensão auditiva</a><p>Áudios e perguntas de compreensão.</p></div></div>
+        <div class="resource"><div class="ico">N</div><div><a href="https://cervantes.de/es/prueba-de-nivel/" target="_blank" rel="noopener">Instituto Cervantes — teste de nível</a><p>Use para diagnóstico, sem substituir o conteúdo do edital.</p></div></div>
+        <div class="resource"><div class="ico">P</div><div><a href="https://spanishgrammar.co.uk/practice-fill-blanks" target="_blank" rel="noopener">SpanishGrammar — prática</a><p>Exercícios de gramática organizados por assunto.</p></div></div>
+        <p class="muted small" style="margin:10px 0 0">Se algum link mudar, pesquise pelo nome do site e pelo assunto específico.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="revisao" aria-labelledby="h-rev">
+    <div class="section-head"><div><h2 id="h-rev">Revisão e autoavaliação</h2><p>Teste-se, registre seus erros e prepare a véspera da prova.</p></div></div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Mini teste de revisão</h3>
+        <p class="lead">Faça sem consultar o material e depois confira.</p>
+        <div id="quiz"></div>
+        <button class="btn primary no-print" style="margin-top:16px" onclick="checkQuiz()">Corrigir mini teste</button>
+        <div id="quizResult" class="q-result" hidden></div>
+      </div>
+      <div class="card">
+        <h3>Meu caderno de erros</h3>
+        <p class="lead">Anote dúvidas, palavras novas e assuntos para revisar. O texto é salvo neste navegador.</p>
+        <textarea id="notes" class="notes" placeholder="Ex.: confundo hay que e tener que; preciso revisar demonstrativos…"></textarea>
+        <p class="muted small" style="margin:10px 0 0">Dica: escreva a regra correta e um exemplo seu para cada erro.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:20px">
+      <h3>Checklist para a véspera</h3>
+      <p class="lead">Confira antes de dormir, em 05/11.</p>
+      <div id="finalChecklist"></div>
+      <div class="callout"><strong>Dia da prova: 06/11/2026.</strong> Faça uma revisão leve, leia as instruções com atenção e não passe a noite tentando aprender tudo de novo.</div>
+    </div>
+  </section>
+
+  <footer class="footer">Plano de preparação — Espanhol S III · 2026</footer>
 </main>
+
 <script>
 const days = [{"date":"23/10 — Sex","title":"Presente do indicativo e verbos especiais","desc":"Presente regular/irregular; encantar, doler, apetecer, encontrarse, venir, volver, soler, interesar; muy/mucho."},{"date":"24/10 — Sáb","title":"Perífrases verbais","desc":"Hay que + infinitivo; tener que + infinitivo; deber + infinitivo; estar + gerundio; soler + infinitivo; ir a + infinitivo."},{"date":"25/10 — Dom","title":"Interrogativos, demonstrativos e pronomes","desc":"Qué, cuál/es, quién/es, cuánto/a/os/as, cómo, cuándo, dónde; este/ese/aquel; mío/tuyo/suyo; algún/ningún/alguien/nadie."},{"date":"26/10 — Seg","title":"Gerúndio, imperativo e posição dos pronomes","desc":"Formação do gerúndio; imperativo; pronomes pessoais átonos; antes de/después de + infinitivo."},{"date":"27/10 — Ter","title":"Orações condicionais e expressões de lugar","desc":"Si + presente; presente; expressões de lugar e localização no tempo e no espaço. Revisão extra à noite."},{"date":"28/10 — Qua","title":"Alimentos, bebidas e refeições","desc":"Alimentos e bebidas; refeições; quantidades; mesa e utensílios."},{"date":"29/10 — Qui","title":"Corpo e saúde","desc":"Partes do corpo; sintomas; doenças; remédios; me duele / me duelen."},{"date":"30/10 — Sex","title":"Casa, móveis e eletrodomésticos","desc":"Cômodos, objetos do cotidiano, móveis, eletrodomésticos; descrever imagens."},{"date":"31/10 — Sáb","title":"Cidade, serviços e direções","desc":"Serviços da cidade; pedir/dar direções; expressões de lugar; imperativo."},{"date":"01/11 — Dom","title":"Números, clima, estações e distâncias","desc":"Números de 1000 em diante; estações do ano; tempo atmosférico; distâncias; medidas e quantidades."},{"date":"02/11 — Seg","title":"Rotina, lazer, frequência e telefone","desc":"Atividades cotidianas e de tempo livre; expresiones de frecuencia; recursos para falar por telefone; futuro."},{"date":"03/11 — Ter","title":"Revisão direcionada","desc":"Revisar todos os tópicos gramaticais, vocabulário acumulado e erros; mini simulado à noite."},{"date":"04/11 — Qua","title":"Simulado escrito, auditivo e visual","desc":"Questões mistas; texto curto; áudio sem transcrição; interpretação de imagens; corrigir e classificar erros."},{"date":"05/11 — Qui","title":"Revisão final e descanso","desc":"Rever apenas os erros recorrentes; cartões de vocabulário; escuta curta; separar o necessário e dormir bem."}];
 const syllabus = [
@@ -212,31 +423,154 @@ const tasks = [
 ["Revisar somente os erros recorrentes e cartões de vocabulário.","Fazer uma escuta curta e ler suas anotações.","Separar o necessário para a prova e descansar."]
 ];
 const key = "planoEspanholSIII2026";
-let state = JSON.parse(localStorage.getItem(key)||"{}");
-function save(){localStorage.setItem(key,JSON.stringify(state));updateProgress()}
-function esc(s){return s.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
+let state = {};
+try{state = JSON.parse(localStorage.getItem(key)||"{}")}catch(e){state={}}
+let filter = "all";
+
+function save(){try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}updateProgress()}
+function esc(s){return String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
+
+function dayDate(i){return new Date(2026,9,23+i)}
+function sameDay(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate()}
+
 function renderDays(){
- document.getElementById("days").innerHTML=days.map((d,i)=>`<article class="day ${state["day"+i]?"done":""}" id="day${i}"><div class="day-head"><div><div class="date">${d.date}</div><h3>${d.title}</h3></div><span class="tag">${i===13?"Véspera":i===11||i===4?"Inclui reforço noturno":"09:00–13:40"}</span></div><p class="muted">${d.desc}</p><div class="tasklist">${tasks[i].map((t,j)=>`<label class="checkrow"><input type="checkbox" data-id="task-${i}-${j}" ${state["task-"+i+"-"+j]?"checked":""}><span>${t}</span></label>`).join("")}<label class="checkrow"><input type="checkbox" data-id="day${i}" ${state["day"+i]?"checked":""}><strong>Marcar dia como concluído</strong></label></div></article>`).join("");
+  const today=new Date();
+  const weeks=[{label:"Semana 1 · 23 a 29 de outubro",from:0,to:7},{label:"Semana 2 · 30 de outubro a 5 de novembro",from:7,to:14}];
+  document.getElementById("days").innerHTML=weeks.map(w=>{
+    const cards=days.slice(w.from,w.to).map((d,k)=>{
+      const i=w.from+k,[dt,wd]=d.date.split(" — "),[dd,mm]=dt.split("/");
+      const isToday=sameDay(dayDate(i),today);
+      const badge=i===13?'<span class="badge warn">Véspera</span>':(i===4||i===11)?'<span class="badge warn">Reforço noturno</span>':'<span class="badge">09:00–13:40</span>';
+      return `<article class="day" id="day${i}" data-i="${i}">
+        <div class="day-top">
+          <div class="datebox"><b>${dd}</b><span>${wd}</span></div>
+          <div class="day-title"><div class="wk">${dd}/${mm} · Dia ${i+1} de 14</div><h4>${esc(d.title)}</h4>
+            <div class="badges">${isToday?'<span class="badge now">Hoje</span>':''}${badge}<span class="badge ok" data-doneflag hidden>Concluído</span></div></div>
+        </div>
+        <p class="day-desc">${esc(d.desc)}</p>
+        <div class="tasklist">
+          ${tasks[i].map((t,j)=>`<label class="check"><input type="checkbox" data-id="task-${i}-${j}" ${state["task-"+i+"-"+j]?"checked":""}><span>${esc(t)}</span></label>`).join("")}
+          <label class="check final"><input type="checkbox" data-id="day${i}" ${state["day"+i]?"checked":""}><span><strong>Marcar dia como concluído</strong></span></label>
+        </div>
+        <div class="day-progress"><div class="bar"><div data-dbar></div></div><span data-dcount>0/4</span></div>
+      </article>`}).join("");
+    return `<div class="week"><h3>${w.label}</h3><div class="days">${cards}</div></div>`;
+  }).join("")+'<div class="empty" id="emptyMsg" hidden>Nenhum dia nesta visualização.</div>';
 }
-function renderSyllabus(){document.getElementById("syllabus").innerHTML=syllabus.map((s,i)=>`<label class="checkrow"><input type="checkbox" data-id="syllabus-${i}" ${state["syllabus-"+i]?"checked":""}><span><strong>${s[0]}</strong><br><span class="muted small">${s[1]}</span></span></label>`).join("")}
-function renderFinal(){let items=["Conferi os tópicos gramaticais em que mais erro.","Revisei vocabulário com cartões ou imagens.","Fiz pelo menos uma escuta sem transcrição.","Separei documento e instruções da prova.","Vou dormir em horário adequado."];document.getElementById("finalChecklist").innerHTML=items.map((s,i)=>`<label class="checkrow"><input type="checkbox" data-id="final-${i}" ${state["final-"+i]?"checked":""}><span>${s}</span></label>`).join("")}
-const quiz=[{q:"A mí me _____ las películas.",o:["gusta","gustan","gusto"],a:1,e:"«Las películas» está no plural, por isso usamos gustan."},{q:"En casa _____ que limpiar.",o:["hay","está","soy"],a:0,e:"«Hay que + infinitivo» expressa obrigação geral."},{q:"Ahora estoy ____ español.",o:["estudio","estudiando","estudiar"],a:1,e:"Estar + gerúndio expressa ação em andamento."},{q:"¿_____ está la farmacia?",o:["Cuándo","Quién","Dónde"],a:2,e:"Dónde pergunta sobre localização."}];
-function renderQuiz(){document.getElementById("quiz").innerHTML=quiz.map((q,i)=>`<div style="padding:10px 0;border-bottom:1px solid var(--line)"><strong>${i+1}. ${q.q}</strong>${q.o.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${o}</label>`).join("")}</div>`).join("")}
-function checkQuiz(){let score=0,details=[];quiz.forEach((q,i)=>{let chosen=document.querySelector(`input[name=q${i}]:checked`);if(chosen&&+chosen.value===q.a)score++;details.push(`${i+1}. ${chosen&&+chosen.value===q.a?"✓":"Resposta: "+q.o[q.a]} — ${q.e}`)});let r=document.getElementById("quizResult");r.hidden=false;r.innerHTML=`<strong>Resultado: ${score}/${quiz.length}</strong><br>${details.map(esc).join("<br>")}`}
-function updateProgress(){let taskTotal=days.length*4+syllabus.length+5;let marked=Object.keys(state).filter(k=>state[k]===true).length;let done=days.filter((_,i)=>state["day"+i]).length;let pct=Math.round(marked/taskTotal*100);document.getElementById("progressText").textContent=pct+"% concluído";document.getElementById("progressBar").style.width=pct+"%";document.getElementById("progressDetail").textContent=`${done} de ${days.length} dias concluídos · ${marked} marcações feitas.`;days.forEach((_,i)=>{let el=document.getElementById("day"+i);if(el)el.classList.toggle("done",!!state["day"+i])})}
-document.addEventListener("change",e=>{if(e.target.matches("input[type=checkbox][data-id]")){state[e.target.dataset.id]=e.target.checked;save()}});
-function resetProgress(){if(confirm("Tem certeza de que deseja apagar todas as marcações e anotações salvas neste navegador?")){state={};localStorage.removeItem(key);document.getElementById("notes").value="";save();renderDays();renderSyllabus();renderFinal()}}
-function exportProgress(){let blob=new Blob([JSON.stringify({...state,notes:document.getElementById("notes").value},null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="progresso-espanhol-SIII.json";a.click();URL.revokeObjectURL(a.href)}
-function importProgress(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let obj=JSON.parse(r.result);document.getElementById("notes").value=obj.notes||"";delete obj.notes;state=obj;save();renderDays();renderSyllabus();renderFinal()}catch{alert("Arquivo de progresso inválido.")}};r.readAsText(f)}
-document.getElementById("notes").value=localStorage.getItem(key+"-notes")||"";document.getElementById("notes").addEventListener("input",e=>localStorage.setItem(key+"-notes",e.target.value));
-renderDays();renderSyllabus();renderFinal();renderQuiz();updateProgress();
-</script><script>
-(function(){
- const el=document.getElementById('personalName');
- if(!el)return;
- try{el.value=localStorage.getItem('espanholSIII_nome')||'Carlos';}catch(e){}
- el.addEventListener('input',function(){
-   try{localStorage.setItem('espanholSIII_nome',el.value);}catch(e){}
- });
-})();
-</script></body></html>
+
+function renderSyllabus(){
+  document.getElementById("syllabus").innerHTML=syllabus.map((s,i)=>`<label class="check"><input type="checkbox" data-id="syllabus-${i}" ${state["syllabus-"+i]?"checked":""}><span><strong>${esc(s[0])}</strong><br><span class="muted small">${esc(s[1])}</span></span></label>`).join("");
+}
+function renderFinal(){
+  const items=["Conferi os tópicos gramaticais em que mais erro.","Revisei vocabulário com cartões ou imagens.","Fiz pelo menos uma escuta sem transcrição.","Separei documento e instruções da prova.","Vou dormir em horário adequado."];
+  document.getElementById("finalChecklist").innerHTML=items.map((s,i)=>`<label class="check"><input type="checkbox" data-id="final-${i}" ${state["final-"+i]?"checked":""}><span>${esc(s)}</span></label>`).join("");
+}
+
+const quiz=[
+ {q:"A mí me _____ las películas.",o:["gusta","gustan","gusto"],a:1,e:"«Las películas» está no plural, por isso usamos gustan."},
+ {q:"En casa _____ que limpiar.",o:["hay","está","soy"],a:0,e:"«Hay que + infinitivo» expressa obrigação geral."},
+ {q:"Ahora estoy ____ español.",o:["estudio","estudiando","estudiar"],a:1,e:"Estar + gerúndio expressa ação em andamento."},
+ {q:"¿_____ está la farmacia?",o:["Cuándo","Quién","Dónde"],a:2,e:"Dónde pergunta sobre localização."}
+];
+function renderQuiz(){
+  document.getElementById("quiz").innerHTML=quiz.map((q,i)=>`<div class="q"><strong>${i+1}. ${esc(q.q)}</strong>${q.o.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${esc(o)}</label>`).join("")}</div>`).join("");
+}
+function checkQuiz(){
+  let score=0,details=[];
+  quiz.forEach((q,i)=>{
+    const c=document.querySelector(`input[name=q${i}]:checked`);
+    const ok=c&&+c.value===q.a;if(ok)score++;
+    details.push(`${i+1}. ${ok?"✓ Correto":"Resposta: "+q.o[q.a]} — ${q.e}`);
+  });
+  const r=document.getElementById("quizResult");r.hidden=false;
+  r.innerHTML=`<strong>Resultado: ${score}/${quiz.length}</strong><br>${details.map(esc).join("<br>")}`;
+}
+
+function updateProgress(){
+  const taskTotal=days.length*4+syllabus.length+5;
+  const marked=Object.keys(state).filter(k=>state[k]===true).length;
+  const done=days.filter((_,i)=>state["day"+i]).length;
+  const sylDone=syllabus.filter((_,i)=>state["syllabus-"+i]).length;
+  let tasksDone=0;days.forEach((_,i)=>tasks[i].forEach((_,j)=>{if(state["task-"+i+"-"+j])tasksDone++}));
+  const pct=Math.round(marked/taskTotal*100);
+  document.getElementById("progressText").textContent=pct+"%";
+  document.getElementById("progressBar").style.width=pct+"%";
+  document.getElementById("topPct").textContent=pct+"%";
+  document.getElementById("topBar").style.width=pct+"%";
+  document.getElementById("progressDetail").textContent=`${done} de ${days.length} dias concluídos · ${marked} marcações feitas.`;
+  document.getElementById("sDays").firstChild.textContent=done;
+  document.getElementById("sSyl").firstChild.textContent=sylDone;
+  document.getElementById("sTasks").firstChild.textContent=tasksDone;
+  document.getElementById("sylCount").textContent=`${sylDone} de ${syllabus.length} tópicos`;
+  let visible=0;
+  days.forEach((_,i)=>{
+    const el=document.getElementById("day"+i);if(!el)return;
+    const isDone=!!state["day"+i];
+    let c=isDone?1:0;tasks[i].forEach((_,j)=>{if(state["task-"+i+"-"+j])c++});
+    el.classList.toggle("done",isDone);
+    el.querySelector("[data-doneflag]").hidden=!isDone;
+    el.querySelector("[data-dbar]").style.width=(c/4*100)+"%";
+    el.querySelector("[data-dcount]").textContent=c+"/4";
+    const show=filter==="all"||(filter==="done"&&isDone)||(filter==="pending"&&!isDone);
+    el.hidden=!show;if(show)visible++;
+  });
+  const em=document.getElementById("emptyMsg");if(em)em.hidden=visible>0;
+}
+
+function updateCountdown(){
+  const t=new Date();t.setHours(0,0,0,0);
+  const diff=Math.round((new Date(2026,10,6)-t)/86400000);
+  const n=document.getElementById("cdNum"),l=document.getElementById("cdLbl");
+  if(diff>1){n.textContent=diff;l.textContent="dias para a prova"}
+  else if(diff===1){n.textContent="1";l.textContent="dia para a prova"}
+  else if(diff===0){n.textContent="Hoje";l.textContent="é dia de prova. Boa sorte!"}
+  else{n.textContent="✓";l.textContent="prova realizada"}
+}
+
+document.addEventListener("change",e=>{
+  if(e.target.matches("input[type=checkbox][data-id]")){state[e.target.dataset.id]=e.target.checked;save()}
+});
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  filter=b.dataset.filter;
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  updateProgress();
+}));
+
+function resetProgress(){
+  if(confirm("Tem certeza de que deseja apagar todas as marcações e anotações salvas neste navegador?")){
+    state={};try{localStorage.removeItem(key);localStorage.removeItem(key+"-notes")}catch(e){}
+    document.getElementById("notes").value="";
+    renderDays();renderSyllabus();renderFinal();save();
+  }
+}
+function exportProgress(){
+  const blob=new Blob([JSON.stringify({...state,notes:document.getElementById("notes").value},null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="progresso-espanhol-SIII.json";a.click();URL.revokeObjectURL(a.href);
+}
+function importProgress(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const obj=JSON.parse(r.result);
+      const notes=obj.notes||"";delete obj.notes;
+      document.getElementById("notes").value=notes;
+      try{localStorage.setItem(key+"-notes",notes)}catch(_){}
+      state=obj;renderDays();renderSyllabus();renderFinal();save();
+    }catch{alert("Arquivo de progresso inválido.")}
+  };
+  r.readAsText(f);e.target.value="";
+}
+
+const notesEl=document.getElementById("notes");
+try{notesEl.value=localStorage.getItem(key+"-notes")||""}catch(e){}
+notesEl.addEventListener("input",e=>{try{localStorage.setItem(key+"-notes",e.target.value)}catch(_){}});
+
+const nameEl=document.getElementById("personalName");
+try{nameEl.value=localStorage.getItem("espanholSIII_nome")||"Carlos"}catch(e){}
+nameEl.addEventListener("input",()=>{try{localStorage.setItem("espanholSIII_nome",nameEl.value)}catch(e){}});
+
+renderDays();renderSyllabus();renderFinal();renderQuiz();updateCountdown();updateProgress();
+</script>
+</body>
+</html>
